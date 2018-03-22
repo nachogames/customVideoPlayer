@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">   
+    <title>Custom Video Player</title>
+</head>
+<body>
+    <div id="main-vid">
+        <video id="vid" class="center">
+            <source src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_60fps_normal.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div id="controls">
+            <div id="progress-bar"></div>
+            <div id="controls-bar">
+                <div id="play-pause" class="btn"></div>
+                <div id="volume" class="btn"></div>
+                <div id="fullscreen" class="btn"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/playback.js"></script>
+</body>
+</html>
