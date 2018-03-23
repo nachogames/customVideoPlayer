@@ -9,47 +9,78 @@ body{
 
 #main-vid{
     position: relative;
-    width: 600px; 
+    width: 50%; 
     margin: 0 auto;
 }
+
 
 .center{
     width: 100%;
     display: block;
 }
 
-#progress-bar{
-    position: relative;
+#controls{
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* padding: 0 10px; */
+}
+
+#blank-bar{
+    position: relative;
+    height: 15px;
+    width: inherit;
+}
+
+#progress-bar{
+    position: absolute;
+    width: inherit;
+    bottom: 0;
+
     height: 5px;
     background-color: rgba(241, 93, 93, 0.3);
+    transition: .1s ease;
 }
 
 #progress-complete{
     height: inherit;
     width: 0;
-    position: absolute;
-    background-color: rgba(241, 93, 93, 1);
-    
+    /* position: absolute; */
+    background-color: rgba(241, 93, 93, 1);    
 }
 
-#controls{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+
+#blank-bar:hover > #progress-bar{
+    cursor: pointer;
+    height: 9px;
 }
 
 #controls-bar{
-    display: flex;
-    height: 40px;
+    width: inherit;
+    height: 0px;
     background-color: rgba(100,100,100,.3);
+    transition: .25s height ease-out;
+}
+
+#main-vid:hover > #controls > #controls-bar{
+    height: 30px;
+}
+
+#main-vid:hover > #controls > #controls-bar > .btn{
+    margin-top: 5px;
+    height: 20px;
+}
+
+.clear{
+    clear: both;
 }
 
 .btn{
-    margin: auto 0;
+    /* margin-top: 5px; */
     width: 20px;
-    height: 20px;
+    height: 0px;
     background-color: white;
+    transition: .25s height ease-out;
 }
 
 .btn:hover{
@@ -57,8 +88,9 @@ body{
 }
 
 #play-pause{
-    margin-right: 10px;
     float: left;
+    margin-right: 20px;
+    margin-left: 10px;
 }
 
 #volume{
@@ -67,4 +99,5 @@ body{
 
 #fullscreen{
     float: right;
+    margin-right: 10px;
 }
